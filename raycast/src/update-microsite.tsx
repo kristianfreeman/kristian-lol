@@ -24,8 +24,8 @@ export default function Command() {
 
         const response = await fetch(apiUrl, {
           headers: {
-            "X-Api-Key": apiKey
-          }
+            "X-Api-Key": apiKey,
+          },
         });
 
         if (!response.ok) {
@@ -39,7 +39,7 @@ export default function Command() {
         await showToast({
           style: Toast.Style.Failure,
           title: "Failed to fetch microsite content",
-          message: error instanceof Error ? error.message : "Unknown error"
+          message: error instanceof Error ? error.message : "Unknown error",
         });
       } finally {
         setIsLoading(false);
@@ -57,9 +57,9 @@ export default function Command() {
         method: "POST",
         headers: {
           "Content-Type": "text/plain",
-          "X-Api-Key": apiKey
+          "X-Api-Key": apiKey,
         },
-        body: values.content
+        body: values.content,
       });
 
       if (!updateResponse.ok) {
@@ -68,14 +68,13 @@ export default function Command() {
 
       await showToast({
         style: Toast.Style.Success,
-        title: "Successfully updated microsite"
+        title: "Successfully updated microsite",
       });
-
     } catch (error) {
       await showToast({
         style: Toast.Style.Failure,
         title: "Failed to update microsite",
-        message: error instanceof Error ? error.message : "Unknown error"
+        message: error instanceof Error ? error.message : "Unknown error",
       });
     }
   }
@@ -89,11 +88,7 @@ export default function Command() {
         </ActionPanel>
       }
     >
-      <Form.TextArea
-        id="content"
-        placeholder="Loading..."
-        value={initialContent}
-      />
+      <Form.TextArea id="content" placeholder="Loading..." value={initialContent} />
     </Form>
   );
 }
