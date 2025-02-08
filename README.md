@@ -1,6 +1,6 @@
-Microsite is a very simple way to generate a website using Cloudflare Workers and KV.
+`microsite` is a very simple way to generate a website using Cloudflare Workers and KV.
 
-`/raycast` is a Raycast extension that you can use to edit the site directly.
+[`/raycast`](https://github.com/kristianfreeman/microsite/tree/main/raycast) is a Raycast extension that you can use to edit the site directly.
 
 ## Install
 
