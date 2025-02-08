@@ -1,0 +1,53 @@
+{
+  "name": "microsite-editor",
+  "title": "Microsite Editor",
+  "description": "Edit your microsite using Raycast",
+  "icon": "command-icon.png",
+  "author": "you",
+  "categories": [
+    "Developer Tools"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "ray develop",
+    "build": "ray build -e dist",
+    "lint": "ray lint"
+  },
+  "preferences": [
+    {
+      "name": "apiUrl",
+      "type": "textfield",
+      "required": true,
+      "title": "Microsite URL",
+      "description": "The URL of your microsite",
+      "placeholder": "https://your-microsite.workers.dev"
+    },
+    {
+      "name": "apiKey",
+      "type": "password",
+      "required": true,
+      "title": "Secret Key",
+      "description": "Your microsite secret key",
+      "placeholder": "Enter your secret key"
+    }
+  ],
+  "commands": [
+    {
+      "name": "update",
+      "title": "Update microsite",
+      "description": "Update your microsite",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.91.1",
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.8.3",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "typescript": "^4.4.3"
+  }
+}
