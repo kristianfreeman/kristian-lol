@@ -8,3 +8,4 @@ vim "$TMPFILE"
 EDITED_TEXT=$(cat "$TMPFILE")
 npx wrangler kv:key put text "$EDITED_TEXT" --binding kv
 rm "$TMPFILE"
+npm run deploy
