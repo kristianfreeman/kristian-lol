@@ -18,12 +18,12 @@ type ExtensionPreferences = {
 declare type Preferences = ExtensionPreferences
 
 declare namespace Preferences {
-  /** Preferences accessible in the `update` command */
-  export type Update = ExtensionPreferences & {}
+  /** Preferences accessible in the `update-microsite` command */
+  export type UpdateMicrosite = ExtensionPreferences & {}
 }
 
 declare namespace Arguments {
-  /** Arguments passed to the `update` command */
-  export type Update = {}
+  /** Arguments passed to the `update-microsite` command */
+  export type UpdateMicrosite = {}
 }
 
